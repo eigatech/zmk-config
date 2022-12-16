@@ -57,7 +57,7 @@
  &trans      &kp EXCL      &kp AT    &kp HASH      &kp DLLR  &kp PRCNT          &kp CARET   &kp AMPS  &kp KP_MULTIPLY  &kp LPAR  &kp RPAR    &kp DEL
  &trans    &bt BT_CLR  &bt BT_PRV  &bt BT_NXT  &bt BT_SEL 0      &to 3          &kp UNDER  &kp EQUAL         &kp LBKT  &kp RBKT  &kp BSLH  &kp GRAVE
  &trans  &out OUT_TOG      &trans      &trans        &trans     &trans          &kp MINUS   &kp PLUS         &kp LBRC  &kp RBRC  &kp PIPE  &kp TILDE
-                                     &kp LGUI        &trans  &kp SPACE            &kp RET     &trans         &kp RALT
+                                     &kp LGUI  &kp LEFT_ALT  &kp SPACE            &kp RET     &trans         &kp RALT
             >;
         };
 
@@ -71,12 +71,12 @@
             >;
         };
 
-        GameSL {
+        Game_++ {
             label = "Game ++";
             bindings = <
  &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5          &trans  &trans  &trans  &trans  &trans  &trans
   &to 3        &trans        &trans        &trans         &kp K         &kp G          &trans  &trans  &trans  &trans  &trans  &trans
- &trans        &trans        &trans        &trans  &kp NUMBER_6  &kp NUMBER_7          &trans  &trans  &trans  &trans  &trans   &to 0
+ &trans        &trans         &to 0        &trans  &kp NUMBER_6  &kp NUMBER_7          &trans  &trans  &trans  &trans  &trans   &to 0
                                             &kp J         &kp I         &kp M          &trans  &trans  &trans
             >;
         };
