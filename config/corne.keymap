@@ -60,26 +60,6 @@
                                      &kp LGUI  &kp LEFT_ALT  &kp SPACE            &kp RET     &trans         &kp RALT
             >;
         };
-
-        Game {
-            label = "Game";
-            bindings = <
- &trans  &trans  &trans  &trans        &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
- &trans  &trans  &trans  &trans        &trans   &sl 4          &trans  &trans  &trans  &trans  &trans  &trans
- &trans  &trans  &trans  &trans        &trans  &trans          &trans  &trans  &trans  &trans  &trans   &to 0
-                         &trans  &kp LEFT_ALT  &trans          &trans  &trans  &trans
-            >;
-        };
-
-        Game_++ {
-            label = "Game ++";
-            bindings = <
- &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5          &trans  &trans  &trans  &trans  &trans  &trans
-  &to 3        &trans        &trans        &trans         &kp K         &kp G          &trans  &trans  &trans  &trans  &trans  &trans
- &trans        &trans         &to 0        &trans  &kp NUMBER_6  &kp NUMBER_7          &trans  &trans  &trans  &trans  &trans   &to 0
-                                            &kp J         &kp I         &kp M          &trans  &trans  &trans
-            >;
-        };
     };
 };
 
