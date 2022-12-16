@@ -62,6 +62,7 @@
         };
 
         Game {
+            label = "Game";
             bindings = <
  &trans  &trans  &trans  &trans        &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
  &trans  &trans  &trans  &trans        &trans   &sl 4          &trans  &trans  &trans  &trans  &trans  &trans
@@ -70,7 +71,8 @@
             >;
         };
 
-        Game___ {
+        GameSL {
+            label = "Game ++";
             bindings = <
  &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5          &trans  &trans  &trans  &trans  &trans  &trans
   &to 3        &trans        &trans        &trans         &kp K         &kp G          &trans  &trans  &trans  &trans  &trans  &trans
