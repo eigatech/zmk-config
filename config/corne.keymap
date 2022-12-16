@@ -8,6 +8,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/keys.h>
 
 / {
     keymap {
@@ -38,10 +39,10 @@
 
             label = "Lower";
             bindings = <
-   &kp TAB  &kp K_PP    &kp UP     &kp N1     &kp N2     &kp N3           &kp N7  &kp N8    &kp N9     &kp N0  &kp HOME      &trans
-  &kp LALT  &kp LEFT  &kp DOWN  &kp RIGHT     &kp N4     &kp N5           &kp N4  &kp N5    &kp N6  &kp RIGHT    &trans     &kp F10
- &kp LSHFT    &trans    &trans     &trans  &kp MINUS   &kp PLUS           &kp N1  &kp N2    &kp N3    &kp DOT    &trans  &kp RSHIFT
-                                 &kp LGUI     &trans  &kp SPACE          &kp RET  &trans  &kp RALT
+ &trans  &kp K_PP    &kp UP        &kp N1     &kp N2     &kp N3           &kp N7     &kp N8    &kp N9     &kp N0  &kp HOME   &trans
+ &trans  &kp LEFT  &kp DOWN     &kp RIGHT     &kp N4     &kp N5           &kp N4     &kp N5    &kp N6  &kp RIGHT    &trans  &kp F10
+ &trans    &trans    &trans  &kp LEFT_ALT  &kp MINUS   &kp PLUS           &kp N1     &kp N2    &kp N3    &kp DOT    &trans   &trans
+                                 &kp LGUI     &trans  &kp SPACE          &kp RET  &kp RCTRL  &kp RALT
             >;
         };
 
@@ -64,20 +65,20 @@
         Game {
             label = "Game";
             bindings = <
- &trans  &trans  &trans  &trans        &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
- &trans  &trans  &trans  &trans        &trans   &sl 4          &trans  &trans  &trans  &trans  &trans  &trans
- &trans  &trans  &trans  &trans        &trans  &trans          &trans  &trans  &trans  &trans  &trans   &to 0
-                         &trans  &kp LEFT_ALT  &trans          &trans  &trans  &trans
+ &trans  &trans  &trans  &trans        &trans  &trans          &trans         &trans  &trans  &trans  &trans  &trans
+ &trans  &trans  &trans  &trans        &trans   &sl 4          &trans         &trans  &trans  &trans  &trans  &trans
+ &trans  &trans  &trans  &trans        &trans  &trans          &trans         &trans  &trans  &trans  &trans   &to 0
+                         &trans  &kp LEFT_ALT  &trans          &trans  &kp RIGHT_WIN  &trans
             >;
         };
 
         Game_++ {
             label = "Game ++";
             bindings = <
- &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5          &trans  &trans  &trans  &trans  &trans  &trans
-  &to 3        &trans        &trans        &trans         &kp K         &kp G          &trans  &trans  &trans  &trans  &trans  &trans
- &trans        &trans         &to 0        &trans  &kp NUMBER_6  &kp NUMBER_7          &trans  &trans  &trans  &trans  &trans   &to 0
-                                            &kp J         &kp I         &kp M          &trans  &trans  &trans
+ &kt F10  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5          &trans  &trans  &trans  &trans  &trans  &trans
+   &to 3         &kp L         &kp O         &kp Y         &kp K         &kp G          &trans  &trans  &trans  &trans  &trans  &trans
+ &kp F10        &trans         &to 0        &trans  &kp NUMBER_6  &kp NUMBER_7          &trans  &trans  &trans  &trans  &trans   &to 0
+                                             &kp J         &kp I         &kp M          &trans  &trans  &trans
             >;
         };
     };
