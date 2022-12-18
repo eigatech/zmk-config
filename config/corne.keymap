@@ -11,6 +11,15 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    macros {
+        new_macro: new_macro {
+            compatible = "zmk,behavior-macro";
+            label = "new_macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(RA(Y)) &kp LC(RA(U))>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -75,10 +84,10 @@
         Game_++ {
             label = "Game ++";
             bindings = <
- &kt F10  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5          &trans  &trans  &trans  &trans  &trans  &trans
-   &to 3         &kp L         &kp O         &kp Y         &kp K         &kp G          &trans  &trans  &trans  &trans  &trans  &trans
- &kp F10        &trans         &to 0        &trans  &kp NUMBER_6  &kp NUMBER_7          &trans  &trans  &trans  &trans  &trans   &to 0
-                                             &kp J         &kp I         &kp M          &trans  &trans  &trans
+  &kt F5  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5          &kp LC(RA(Y))  &kp LC(RA(U))  &kp LC(RA(I))  &kp LC(RA(H))  &kp LC(RA(J))  &trans
+   &to 3         &kp L         &kp O         &kp Y         &kp K         &kp G                 &trans         &trans         &trans         &trans         &trans  &trans
+ &kp F10         &none         &to 0         &none  &kp NUMBER_6  &kp NUMBER_7                 &trans         &trans         &trans         &trans         &trans   &to 0
+                                             &kp J         &kp I         &kp M                 &trans         &trans         &trans
             >;
         };
     };
