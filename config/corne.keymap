@@ -48,10 +48,10 @@
 
             label = "Lower";
             bindings = <
- &trans  &kp K_PP    &kp UP        &kp N1     &kp N2     &kp N3           &kp N7     &kp N8    &kp N9     &kp N0  &kp HOME   &trans
- &trans  &kp LEFT  &kp DOWN     &kp RIGHT     &kp N4     &kp N5           &kp N4     &kp N5    &kp N6  &kp RIGHT    &trans  &kp F10
- &trans    &trans    &trans  &kp LEFT_ALT  &kp MINUS   &kp PLUS           &kp N1     &kp N2    &kp N3    &kp DOT    &trans   &trans
-                                 &kp LGUI     &trans  &kp SPACE          &kp RET  &kp RCTRL  &kp RALT
+       &trans  &kp K_PP    &kp UP     &kp N1     &kp N2     &kp N3           &kp N7     &kp N8    &kp N9     &kp N0  &kp HOME   &trans
+       &trans  &kp LEFT  &kp DOWN  &kp RIGHT     &kp N4     &kp N5           &kp N4     &kp N5    &kp N6  &kp RIGHT    &trans  &kp F10
+ &kp LEFT_ALT    &trans    &trans     &trans  &kp MINUS   &kp PLUS           &kp N1     &kp N2    &kp N3    &kp DOT    &trans   &trans
+                                    &kp LGUI     &trans  &kp SPACE          &kp RET  &kp RCTRL  &kp RALT
             >;
         };
 
@@ -84,9 +84,9 @@
         Game_++ {
             label = "Game ++";
             bindings = <
-  &kt F5  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5          &kp LC(RA(Y))  &kp LC(RA(U))  &kp LC(RA(I))  &kp LC(RA(H))  &kp LC(RA(J))  &trans
-   &to 3         &kp L         &kp O         &kp Y         &kp K         &kp G                 &trans         &trans         &trans         &trans         &trans  &trans
- &kp F10         &none         &to 0         &none  &kp NUMBER_6  &kp NUMBER_7                 &trans         &trans         &trans         &trans         &trans   &to 0
+  &kt F5  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5          &kp LC(RA(Y))  &kp LC(RA(U))  &kp LC(RA(I))  &kp LC(RA(H))  &kp LC(RA(J))  &kp LC(RA(DEL))
+   &to 3         &kp L         &kp O         &kp Y         &kp K         &kp G                 &trans         &trans         &trans         &trans         &trans       &kp LA(F4)
+ &kp F10         &none         &to 0         &none  &kp NUMBER_6  &kp NUMBER_7                 &trans         &trans         &trans         &trans         &trans            &to 0
                                              &kp J         &kp I         &kp M                 &trans         &trans         &trans
             >;
         };
