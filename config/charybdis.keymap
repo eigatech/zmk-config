@@ -67,12 +67,12 @@
             >;
         };
 
-        layer_5 {
+        Mouse {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                         &none   &none   &none    &trans  &trans
+                         &mkp LCLK   &mkp MCLK   &mkp RCLK    &trans  &trans
             >;
         };
     };
