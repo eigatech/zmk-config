@@ -1,4 +1,6 @@
 {
+  "id": "charybdis",
+  "name": "charybdis",
   "layouts": {
     "default": {
       "layout": [
@@ -14,7 +16,7 @@
         { "label":      "O", "row": 0, "col": 10, "x":    12, "y":   0.11 },
         { "label":      "P", "row": 0, "col": 11, "x":    13, "y":   0.36 },
         { "label":   "BSPC", "row": 0, "col": 12, "x":    14, "y":   0.36 },
-      
+
         { "label":   "Ctrl", "row": 1, "col":  0, "x":     0, "y":   1.36 },
         { "label":      "A", "row": 1, "col":  1, "x":     1, "y":   1.36 },
         { "label":      "S", "row": 1, "col":  2, "x":     2, "y":   1.11 },
@@ -27,7 +29,7 @@
         { "label":      "L", "row": 1, "col": 10, "x":    12, "y":   1.11 },
         { "label":      ";", "row": 1, "col": 11, "x":    13, "y":   1.36 },
         { "label":      "'", "row": 1, "col": 12, "x":    14, "y":   1.36 },
-      
+
         { "label": "LShift", "row": 2, "col":  0, "x":     0, "y":   2.36 },
         { "label":      "Z", "row": 2, "col":  1, "x":     1, "y":   2.36 },
         { "label":      "X", "row": 2, "col":  2, "x":     2, "y":   2.11 },
@@ -40,7 +42,7 @@
         { "label":      ".", "row": 2, "col": 10, "x":    12, "y":   2.11 },
         { "label":      "/", "row": 2, "col": 11, "x":    13, "y":   2.36 },
         { "label":    "Esc", "row": 2, "col": 12, "x":    14, "y":   2.36 },
-      
+
         { "label":    "GUI", "row": 3, "col":  3, "x":  3.48, "y":   3.13, "r":   0 },
         { "label":    "LWR", "row": 3, "col":  4, "x":  3.48, "y":   3.13, "r":  15, "rx":  3.98, "ry": 7.63 },
         { "label":    "SPC", "row": 3, "col":  5, "x":  3.48, "y":    3.1, "r":  30, "rx":  3.98, "ry": 7.63 },
@@ -48,5 +50,6 @@
         { "label":    "RSE", "row": 3, "col":  8, "x": 10.52, "y":   3.13, "r": -15, "rx": 11.02, "ry": 7.63 }
       ]
     }
-  }
+  },
+  "sensors": []
 }
