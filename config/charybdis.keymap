@@ -65,15 +65,5 @@
                                              &kp J         &kp I         &kp M                 &trans         &trans
             >;
         };
-
-        Mouse {
-            label = "Mouse";
-            bindings = <
- &trans  &trans  &trans  &trans  &trans  &trans          &trans            &trans       &trans        &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans          &trans         &mkp LCLK       &mkp MCLK  &mkp RCLK  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans          &trans  &mwh SCROLL_DOWN  &mwh SCROLL_UP     &trans  &trans
-                         &trans  &trans  &trans          &trans            &trans
-            >;
-        };
     };
 };
