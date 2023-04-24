@@ -66,13 +66,13 @@
             >;
         };
 
-        Button {
-        label = "Button";
-        bindings = <
-        &none  &bt BT_CLR  &trans    &trans     &trans      &bt BT_SEL 0          &trans      &trans        &trans     &trans    &trans  &none
-        &none  &kp LGUI    &kp LALT  &kp LCTRL  &kp LSHIFT  &bt BT_SEL 1          &trans  &kp RSHIFT     &kp RCTRL   &kp RALT  &kp RGUI  &none
-        &none  &trans      &trans    &trans     &trans      &bt BT_SEL 2          &trans      &mkp LCLK  &mkp MCLK  &mkp RCLK    &trans  &none
-                                     &mkp LCLK  &mkp MCLK   &mkp RCLK             &trans      &trans
+        Mouse {
+            label = "Mouse";
+            bindings = <
+ &trans  &trans  &trans  &trans  &trans  &trans          &trans            &trans       &trans        &trans  &trans  &trans
+ &trans  &trans  &trans  &trans  &trans  &trans          &trans         &mkp LCLK       &mkp MCLK  &mkp RCLK  &trans  &trans
+ &trans  &trans  &trans  &trans  &trans  &trans          &trans  &mwh SCROLL_DOWN  &mwh SCROLL_UP     &trans  &trans
+                         &trans  &trans  &trans          &trans            &trans
             >;
         };
     };
