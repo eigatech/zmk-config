@@ -72,7 +72,7 @@
  &trans  &trans  &trans  &trans  &trans  &trans          &trans            &trans       &trans        &trans  &trans  &trans
  &trans  &trans  &trans  &trans  &trans  &trans          &trans            &trans       &trans        &trans  &trans  &trans
  &trans  &trans  &trans  &trans  &trans  &trans          &trans  &mwh SCROLL_DOWN  &mwh SCROLL_UP     &trans  &trans
-                         &mkp LCLK  &mkp RCLK  &mkp MCLK          &trans            &trans
+                         &trans  &trans  &trans          &trans            &trans
             >;
         };
     };
