@@ -41,7 +41,7 @@
             label = "Raise";
             bindings = <
 &trans      &kp EXCL      &kp AT    &kp HASH      &kp DLLR     &kp PRCNT    &kp CARET   &kp AMPS  &kp KP_MULTIPLY  &kp LPAR  &kp RPAR    &kp DEL
-&trans    &bt BT_CLR  &bt BT_PRV  &bt BT_NXT  &bt BT_SEL 0         &to 3    &kp UNDER  &kp EQUAL         &kp LBKT  &kp RBKT  &kp BSLH  &kp GRAVE
+&trans    &bt BT_CLR  &bt BT_PRV  &bt BT_NXT  &trans         &to 3    &kp UNDER  &kp EQUAL         &kp LBKT  &kp RBKT  &kp BSLH  &kp GRAVE
 &trans  &out OUT_TOG      &bootloader      &trans        &trans        &trans    &kp MINUS   &kp PLUS         &kp LBRC  &kp RBRC  &kp PIPE  &kp TILDE
                                     &kp LGUI     &kp SPACE  &kp LEFT_ALT       &trans    &kp RET
             >;
