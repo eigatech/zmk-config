@@ -42,7 +42,7 @@
             bindings = <
 &trans      &kp EXCL      &kp AT    &kp HASH      &kp DLLR     &kp PRCNT    &kp CARET   &kp AMPS  &kp KP_MULTIPLY  &kp LPAR  &kp RPAR    &kp DEL
 &trans    &bt BT_CLR  &bt BT_PRV  &bt BT_NXT  &bt BT_SEL 0         &to 3    &kp UNDER  &kp EQUAL         &kp LBKT  &kp RBKT  &kp BSLH  &kp GRAVE
-&trans  &out OUT_TOG      &trans      &trans        &trans        &trans    &kp MINUS   &kp PLUS         &kp LBRC  &kp RBRC  &kp PIPE  &kp TILDE
+&trans  &out OUT_TOG      &bootloader      &trans        &trans        &trans    &kp MINUS   &kp PLUS         &kp LBRC  &kp RBRC  &kp PIPE  &kp TILDE
                                     &kp LGUI     &kp SPACE  &kp LEFT_ALT       &trans    &kp RET
             >;
         };
@@ -50,7 +50,7 @@
         Game {
             label = "Game";
             bindings = <
-&trans  &trans  &trans  &trans  &trans        &trans      &trans  &trans  &trans  &trans  &trans  &bootloader
+&trans  &trans  &trans  &trans  &trans        &trans      &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans         &sl 4      &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans        &trans      &trans  &trans  &trans  &trans  &trans   &to 0
                         &trans  &trans  &kp LEFT_ALT    &kp RGUI  &trans
