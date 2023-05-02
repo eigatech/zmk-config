@@ -18,9 +18,9 @@
         Base {
             label = "Base";
             bindings = <
-  &kp TAB  &kp Q  &kp W      &kp E      &kp R  &kp T    &kp Y    &kp U      &kp I    &kp O       &kp P    &kp BSPC
-  &kp ESC  &kp A  &kp S      &kp D      &kp F  &kp G    &kp H    &kp J      &kp K    &kp L    &kp SEMI    &kp APOS
-&kp LSHFT  &kp Z  &kp X      &kp C      &kp V  &kp B    &kp N    &kp M  &kp COMMA  &kp DOT    &kp FSLH  &kp RSHIFT
+  &kp TAB  &kp Q  &kp W      &kp E      &kp R  &kp T    &kp Y    &kp U      &kp I    &kp O     &kp P    &kp BSPC
+  &kp ESC  &kp A  &kp S      &kp D      &kp F  &kp G    &kp H    &kp J      &kp K    &kp L  &kp SEMI    &kp APOS
+&kp LSHFT  &kp Z  &kp X      &kp C      &kp V  &kp B    &kp N    &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RSHIFT
                          &kp LCTRL  &kp SPACE  &mo 1    &mo 2  &kp RET
             >;
 
@@ -30,8 +30,8 @@
         Lower {
             label = "Lower";
             bindings = <
-      &trans    &trans    &kp UP     &kp N1     &kp N2    &kp N3       &kp N7   &kp N8  &kp N9   &kp N0  &kp HOME   &kp F1
-      &trans  &kp LEFT  &kp DOWN  &kp RIGHT     &kp N4    &kp N5       &kp N4   &kp N5  &kp N6   &trans    &trans  &kp F10
+      &trans    &trans    &kp UP     &trans     &trans    &trans       &kp N7   &kp N8  &kp N9   &kp N0  &kp HOME   &kp F1
+      &trans  &kp LEFT  &kp DOWN  &kp RIGHT     &trans    &trans       &kp N4   &kp N5  &kp N6   &trans    &trans  &kp F10
 &kp LEFT_ALT    &trans    &trans     &trans  &kp MINUS  &kp PLUS       &kp N1   &kp N2  &kp N3  &kp DOT    &trans  &kp F20
                                    &kp LGUI  &kp SPACE    &trans    &kp RCTRL  &kp RET
             >;
@@ -40,10 +40,10 @@
         Raise {
             label = "Raise";
             bindings = <
-&trans      &kp EXCL      &kp AT    &kp HASH      &kp DLLR     &kp PRCNT    &kp CARET   &kp AMPS  &kp KP_MULTIPLY  &kp LPAR  &kp RPAR    &kp DEL
-&trans    &bt BT_CLR  &bt BT_PRV  &bt BT_NXT  &trans         &to 3    &kp UNDER  &kp EQUAL         &kp LBKT  &kp RBKT  &kp BSLH  &kp GRAVE
-&trans  &out OUT_TOG      &bootloader      &trans        &trans        &trans    &kp MINUS   &kp PLUS         &kp LBRC  &kp RBRC  &kp PIPE  &kp TILDE
-                                    &kp LGUI     &kp SPACE  &kp LEFT_ALT       &trans    &kp RET
+&trans      &kp EXCL       &kp AT    &kp HASH   &kp DLLR     &kp PRCNT    &kp CARET   &kp AMPS  &kp KP_MULTIPLY  &kp LPAR  &kp RPAR    &kp DEL
+&trans    &bt BT_CLR   &bt BT_PRV  &bt BT_NXT     &trans         &to 3    &kp UNDER  &kp EQUAL         &kp LBKT  &kp RBKT  &kp BSLH  &kp GRAVE
+&trans  &out OUT_TOG  &bootloader      &trans     &trans        &trans    &kp MINUS   &kp PLUS         &kp LBRC  &kp RBRC  &kp PIPE  &kp TILDE
+                                     &kp LGUI  &kp SPACE  &kp LEFT_ALT       &trans    &kp RET
             >;
         };
 
@@ -69,10 +69,10 @@
 
         Mouse {
             bindings = <
-&trans  &trans  &trans     &trans     &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans     &trans     &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&mkp MCLK  &trans  &trans     &trans     &trans     &trans    &trans  &trans  &trans  &trans  &trans  &mkp LCLK
-                        &mkp LCLK  &trans  &mkp RCLK       &trans  &trans
+   &trans  &trans  &trans     &trans  &trans     &trans    &trans  &trans  &trans  &trans  &trans     &trans
+   &trans  &trans  &trans     &trans  &trans     &trans    &trans  &trans  &trans  &trans  &trans     &trans
+&mkp MCLK  &trans  &trans     &trans  &trans     &trans    &trans  &trans  &trans  &trans  &trans  &mkp LCLK
+                           &mkp LCLK  &trans  &mkp RCLK    &trans  &trans
             >;
         };
     };
