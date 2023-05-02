@@ -50,7 +50,7 @@
         Game {
             label = "Game";
             bindings = <
-&trans  &trans  &trans  &trans  &trans        &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans        &trans      &trans  &trans  &trans  &trans  &trans  &bootloader
 &trans  &trans  &trans  &trans  &trans         &sl 4      &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans        &trans      &trans  &trans  &trans  &trans  &trans   &to 0
                         &trans  &trans  &kp LEFT_ALT    &kp RGUI  &trans
@@ -71,8 +71,8 @@
             bindings = <
 &trans  &trans  &trans     &trans     &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans     &trans     &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans     &trans     &trans     &trans    &trans  &trans  &trans  &trans  &trans  &mkp LCLK
-                        &mkp LCLK  &trans  &mkp RCLK    &mkp RCLK  &mkp LCLK
+&mkp MCLK  &trans  &trans     &trans     &trans     &trans    &trans  &trans  &trans  &trans  &trans  &mkp LCLK
+                        &mkp LCLK  &trans  &mkp RCLK       &trans  &trans
             >;
         };
     };
