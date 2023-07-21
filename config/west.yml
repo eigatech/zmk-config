@@ -1,11 +1,11 @@
 manifest:
   remotes:
     - name: zmkfirmware
-      url-base: https://github.com/zmkfirmware
+      url-base: https://github.com/petejohanson
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: main
+      revision: bluetooth/split-peripheral-slot-clearing-fix
       import: app/west.yml
   self:
     path: config
