@@ -1,4 +1,6 @@
 {
+  "id": "totem",
+  "name": "totem",
   "url": "https://github.com/GEIGEIGEIST/TOTEM",
   "layouts": {
     "LAYOUT": {
@@ -46,5 +48,6 @@
         { "row": 3, "col":  9, "x": 10.037, "y": 3.714, "w": 1.059 }
       ]
     }
-  }
+  },
+  "sensors": []
 }
