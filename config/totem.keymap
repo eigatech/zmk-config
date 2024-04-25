@@ -51,9 +51,7 @@
         };
     };
 
-    combos {
-        compatible = "zmk,combos";
-    };
+    combos { compatible = "zmk,combos"; };
 
     keymap {
         compatible = "zmk,keymap";
@@ -91,8 +89,8 @@
         Fun {
             label = "Fun";
             bindings = <
-        &bootloader  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &kp END  &kp F1
-        &trans       &trans  &trans  &trans  &to 4     &trans  &trans  &trans  &trans   &kp F10
+        &bootloader  &trans  &trans  &trans  &to 4     &trans  &trans  &trans  &kp END  &kp F1
+        &trans       &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans   &kp F10
 &trans  &trans       &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans   &kp F20  &kp F7
                              &trans  &trans  &trans    &trans  &trans  &trans
             >;
@@ -111,10 +109,10 @@
 
         Gaming+ {
             bindings = <
-        &kp F10  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp T     &trans  &trans  &trans  &trans  &kp LC(RA(DEL))
-        &kp L    &kp O         &kp Y         &kp K         &kp G     &kp F5  &trans  &trans  &trans  &trans
-&trans  &to 0    &trans        &trans        &trans        &trans    &trans  &trans  &trans  &trans  &trans           &kp LA(F4)
-                               &kp J         &kp I         &kp M     &trans  &trans  &trans
+        &kp F10  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp T     &kp RA(RC(Y))  &kp RA(RC(U))  &trans  &trans  &kp LC(RA(DEL))
+        &kp L    &kp O         &kp Y         &kp K         &kp G     &kp F5         &trans         &trans  &trans  &trans
+&trans  &to 0    &trans        &trans        &trans        &trans    &trans         &trans         &trans  &trans  &trans           &kp LA(F4)
+                               &kp J         &kp I         &kp M     &trans         &trans         &trans
             >;
 
             label = "Gaming+";
