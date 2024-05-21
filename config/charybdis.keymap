@@ -1,0 +1,71 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/backlight.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/mouse.h>
+#include <dt-bindings/zmk/outputs.h>
+
+&lt {
+    tapping-term-ms = <240>;
+    flavor = "balanced";
+    quick-tap-ms = <150>;
+};
+
+/ {
+    combos { compatible = "zmk,combos"; };
+
+    keymap {
+        compatible = "zmk,keymap";
+
+        Base {
+            label = "Base";
+            bindings = <
+&kp ESCAPE      &kp Q  &kp W  &kp E      &kp R      &kp T    &kp Y  &kp U      &kp I      &kp O    &kp P     &kp BSPC
+&kp LEFT_SHIFT  &kp A  &kp S  &kp D      &kp F      &kp G    &kp H  &kp J      &kp K      &kp L    &kp SEMI  &kp APOS
+&kp LEFT_ALT    &kp Z  &kp X  &kp C      &kp V      &kp B    &kp N  &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp RSHIFT
+                              &kp LCTRL  &kp SPACE  &mo 1    &mo 2  &kp ENTER
+            >;
+
+            trackball-bindings = <&tmv_coarse>;
+        };
+
+        Movement {
+            label = "left";
+            bindings = <
+&trans    &kp HOME       &kp END         &kp UP_ARROW    &kp PAGE_UP      &kp PAGE_DOWN      &trans     &kp N7  &kp N8  &kp N9  &kp KP_MULTIPLY  &kp BACKSPACE
+&kp CLCK  &kp RIGHT_ALT  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PRINTSCREEN    &kp MINUS  &kp N4  &kp N5  &kp N6  &kp PLUS         &kp DEL
+&kp LGUI  &trans         &trans          &kp LSHFT       &kp LEFT_ALT     &kp TAB            &kp SLASH  &kp N1  &kp N2  &kp N3  &kp DOT          &kp ENTER
+                                         &trans          &kp SPACE        &trans             &trans     &kp N0
+            >;
+        };
+
+        Function {
+            label = "right_1";
+            bindings = <
+&trans  &kp EXCL  &kp AT  &kp HASH  &kp DLLR   &kp PRCNT    &kp CARET  &kp AMPS   &kp KP_MULTIPLY   &kp LPAR           &kp RPAR  &kp DEL
+&kp F1  &kp F2    &kp F3  &kp F4    &kp F5     &kp F6       &kp UNDER  &kp EQUAL  &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp BSLH  &kp TILDE
+&kp F7  &kp F8    &kp F9  &kp F10   &kp F11    &kp F12      &kp MINUS  &kp PLUS   &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PIPE  &kp GRAVE
+                          &trans    &kp SPACE  &trans       &trans     &kp LCTRL
+            >;
+        };
+
+        Firmware {
+            label = "setting";
+            bindings = <
+&out OUT_TOG  &none  &none  &none       &none       &bt BT_CLR_ALL    &bl BL_TOG  &none  &none  &none  &none  &to 0
+&none         &none  &none  &bt BT_PRV  &bt BT_NXT  &none             &none       &none  &none  &none  &none  &none
+&none         &none  &none  &none       &none       &bootloader       &none       &none  &none  &none  &none  &none
+                            &none       &none       &none             &none       &none
+            >;
+        };
+
+        Mouse {
+            bindings = <
+&trans     &trans  &trans  &trans     &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans     &trans  &trans  &trans     &trans  &trans    &trans  &trans  &trans  &trans  &trans  &mkp LCLK
+&mkp MCLK  &trans  &trans  &trans     &trans  &trans    &trans  &trans  &trans  &trans  &trans  &mkp RCLK
+                           &mkp LCLK  &trans  &trans    &trans  &trans
+            >;
+        };
+    };
+};
