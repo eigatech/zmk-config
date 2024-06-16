@@ -1,0 +1,50 @@
+#include "charybdis.dtsi"
+#include "charybdis_3610.dtsi"
+
+&default_transform {
+	col-offset = <6>;
+};
+
+&five_column_transform {
+	col-offset = <5>;
+};
+
+&kscan0 {
+	compatible = "zmk,kscan-gpio-matrix";
+	
+	col-gpios
+		= <&pro_micro 19 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+		, <&pro_micro 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+		, <&pro_micro 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+		, <&pro_micro 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+		, <&pro_micro 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+		, <&pro_micro 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+		;
+
+	row-gpios
+		= <&pro_micro 18 GPIO_ACTIVE_HIGH>
+		, <&pro_micro 5 GPIO_ACTIVE_HIGH>
+		, <&pro_micro 4 GPIO_ACTIVE_HIGH>
+		, <&pro_micro 9 GPIO_ACTIVE_HIGH>
+		;
+};
+
+&spi0 {
+    status = "okay";
+};
+
+&trackball {
+    status = "okay";
+};
+
+/ {
+	vtrackball: virtual_input_trackball {
+		compatible = "zmk,virtual-input";
+	};
+
+	input_relay_config_trackball {
+		compatible = "zmk,split-peripheral-input-relay";
+		device = <&trackball>;
+		relay-channel = <102>;
+	};
+};
