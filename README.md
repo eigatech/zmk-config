@@ -2,7 +2,7 @@
 
 This repository hosts my zmk-configs as seen on the YouTube videos linked above.
 
-Additionally, this repository contains alternative configurations meant to be used with an extra controller acting as a dongle. Pease refer to the Dongle flashing chapter for instructions.
+Additionally, this repository contains alternative configurations meant to be used with an extra controller acting as a dongle. Pease refer to the [Dongle Flashing](https://github.com/eigatech/zmk-config#dongle-flashing) chapter for instructions.
 
 ### Corne
 
