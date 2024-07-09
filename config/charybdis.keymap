@@ -14,7 +14,7 @@
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
         scale-multiplier = <1>;
-        scale-divisor = <12>;
+        scale-divisor = <8>;
     };
 
     trackball_snipe_listener {
