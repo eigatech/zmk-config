@@ -1,16 +1,6 @@
 # eiga's zmk-config
 
-**You probably reached this page by watching one of my [Ergo Split Keyb Videos](https://www.youtube.com/playlist?list=PL1E2ddJCbc13DvCGYXX9jVVX1BqNGKE5D).**
-
-This repository hosts my zmk-configs as seen on the YouTube videos linked above.
-
-Additionally, this repository contains alternative configurations meant to be used with an extra controller acting as a dongle. Pease refer to the [Dongle Flashing](https://github.com/eigatech/zmk-config#dongle-flashing) chapter for instructions.
-
-> [!NOTE]  
-> The configurations above are meant to be used with builds that are identical to the ones featured in the videos, otherwise they should be used as reference only.
-
-## Table of contents
-
+### Table of contents
 - Branches
     - [Corne](#corne)
     - [Charybdis](#charybdis)
@@ -19,6 +9,16 @@ Additionally, this repository contains alternative configurations meant to be us
 - [Dongle Flashing](#dongle-flashing)
 - [Shops and Useful links](#shops-and-other-useful-links)
 
+## Hello
+
+You probably reached this page by watching one of my [Ergo Split Keyb Videos](https://www.youtube.com/playlist?list=PL1E2ddJCbc13DvCGYXX9jVVX1BqNGKE5D).
+
+This repository hosts my zmk-configs as seen on the YouTube videos linked above.
+
+Additionally, this repository contains alternative configurations meant to be used with an extra controller acting as a dongle. Pease refer to the [Dongle Flashing](https://github.com/eigatech/zmk-config#dongle-flashing) chapter for instructions.
+
+> [!NOTE]  
+> These configurations are meant to be used with builds that are identical to the ones featured in the videos, otherwise they should be used as reference only.
 
 ## Corne
 
