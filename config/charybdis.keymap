@@ -9,12 +9,12 @@
     trackball_listener {
         compatible = "zmk,input-behavior-listener";
         device = <&vtrackball>;
-        layers = <0>;
+        layers = <0 2 3 4>;
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
         scale-multiplier = <1>;
-        scale-divisor = <6>;
+        scale-divisor = <4>;
         bindings = <&ib_toggle_layer 5>;
     };
 
@@ -37,7 +37,7 @@
         x-input-code = <INPUT_REL_MISC>;
         y-input-code = <INPUT_REL_WHEEL>;
         y-invert;
-        bindings = <&ib_wheel_scaler 1 8>;
+        bindings = <&ib_wheel_scaler 1 16>;
     };
 
     ib_wheel_scaler: ib_wheel_scaler {
