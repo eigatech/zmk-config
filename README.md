@@ -11,9 +11,9 @@
 
 ## Hello
 
-You probably reached this page by watching one of my [Ergo Split Keyb Videos](https://www.youtube.com/playlist?list=PL1E2ddJCbc13DvCGYXX9jVVX1BqNGKE5D).
+You probably reached this page by watching one of these [Ergo Split Keyb Videos](https://www.youtube.com/playlist?list=PL1E2ddJCbc13DvCGYXX9jVVX1BqNGKE5D).
 
-This repository hosts my zmk-configs as seen on the YouTube videos linked above.
+This repository hosts zmk-configs as seen in the YouTube videos linked above.
 
 Additionally, this repository contains alternative configurations meant to be used with an extra controller acting as a dongle. Pease refer to the [Dongle Flashing](https://github.com/eigatech/zmk-config#dongle-flashing) chapter for instructions.
 
