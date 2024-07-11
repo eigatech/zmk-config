@@ -7,6 +7,7 @@
         - [Module documentation](#module-documentation)
     - [TOTEM](#totem)
 - [Dongle Flashing](#dongle-flashing)
+- [ZMK Keymap Editor](#zmk-keymap-editor)
 - [Shops and Useful links](#shops-and-other-useful-links)
 
 ## Hello
@@ -63,6 +64,10 @@ Dongle configs use Seeed Xiao Ble microcontrollers housed in a nifty 3D printed 
 
 > [!WARNING]  
 > When using both Nice!Nano and Seeed XIAO microcontrollers, make sure you are flashing them with the correct files!
+
+## ZMK Keymap Editor
+
+Nick Coutsos' [Keymap Editor](https://nickcoutsos.github.io/keymap-editor/) is a user-friendly, browser-based WYSIWYG app designed to make editing your keymap file easier. It supports conditional layers, behaviors, combo and macro editing, rotary encoders, and more.
 
 ## Shops and other useful links
 
