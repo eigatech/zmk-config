@@ -17,8 +17,6 @@
 #define Nav         1
 #define Sym         2
 #define Fun         3
-#define Game        4
-#define Gameplus    5
 
 &mt {
     quick-tap-ms = <100>;
@@ -89,26 +87,6 @@
         &trans       &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans   &kp F10
 &trans  &trans       &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans   &kp F20  &kp F7
                              &trans  &trans  &trans    &trans  &trans  &trans
-            >;
-        };
-
-        Gaming {
-            display-name = "Gaming";
-            bindings = <
-            &kp Z           &kp X  &kp C      &kp V         &sl 5     &trans  &trans  &trans  &trans  &trans
-            &kp TAB         &kp Q  &kp W      &kp E         &kp R     &trans  &trans  &trans  &trans  &trans
-&kp ESCAPE  &kp LEFT_SHIFT  &kp A  &kp S      &kp D         &kp F     &trans  &trans  &trans  &trans  &trans  &trans
-                                   &kp LCTRL  &kp LEFT_ALT  &trans    &trans  &trans  &trans
-            >;
-        };
-
-        Gaming+ {
-            display-name = "Gaming+";
-            bindings = <
-        &kp F10  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp T     &kp RA(RC(Y))  &kp RA(RC(U))  &trans  &trans  &kp LC(RA(DEL))
-        &kp L    &kp O         &kp Y         &kp K         &kp G     &kp F5         &trans         &trans  &trans  &trans
-&trans  &to 0    &trans        &trans        &trans        &trans    &trans         &trans         &trans  &trans  &trans           &kp LA(F4)
-                               &kp J         &kp I         &kp M     &trans         &trans         &trans
             >;
         };
     };
