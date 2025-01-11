@@ -29,11 +29,15 @@
         >;
     };
  
+    kscan0: kscan_0 {
+        diode-direction = "col2row"; 
+    };
+
     default_layout: default_layout {
         compatible = "zmk,physical-layout";
         display-name = "TOTEM";
+
         transform = <&default_transform>;
-        kscan = <&kscan0>;
 
         keys  //                     w   h    x    y     rot   rx   ry
             = <&key_physical_attrs 105 100   77  151 (-1000)  130  201>
@@ -76,8 +80,4 @@
             , <&key_physical_attrs 105 100 1003  371       0    0    0>
             ;
     };
- 
-    kscan0: kscan_0 {
-        diode-direction = "col2row"; 
-    };
- };
+};
