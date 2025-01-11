@@ -50,7 +50,7 @@ Additionally, this repository contains alternative configurations meant to be us
 
 - [TOTEM](https://github.com/eigatech/zmk-config/tree/totem)
 - [TOTEM Dongle](https://github.com/eigatech/zmk-config/tree/totem-dongle)
-- [TOTEM Prospector]([https://github.com/eigatech/zmk-config/tree/totem-dongle](https://github.com/eigatech/zmk-config/tree/totem-prospector))
+- [TOTEM Prospector]([https://github.com/eigatech/zmk-config/tree/totem-dongle](https://github.com/eigatech/zmk-config/tree/totem-prospector)
 
 ## Dongle Flashing
 
