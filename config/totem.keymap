@@ -107,7 +107,7 @@
             bindings = <
         &kp F10  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp T     &kp RA(RC(Y))  &kp RA(RC(U))  &trans  &trans  &kp LC(RA(DEL))
         &kp L    &kp O         &kp Y         &kp K         &kp G     &kp F5         &trans         &trans  &trans  &trans
-&trans  &to 0    &trans        &trans        &trans        &trans    &trans         &trans         &trans  &trans  &trans           &kp LA(F4)
+&trans  &to 0    &trans        &kp P &trans        &trans    &trans         &trans         &trans  &trans  &trans           &kp LA(F4)
                                &kp J         &kp I         &kp M     &trans         &trans         &trans
             >;
         };
