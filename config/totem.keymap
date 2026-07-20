@@ -1,114 +1,166 @@
-//
-//                                                        ▀▀▀▀▀     ▀▀▀▀▀          ▀▀█▀▀
-//                                                        ▄▀▀▀▄  ▄  ▄▀▀▀▄  ▄  ▄▀▀▀▄  █  ▄▀▀▀▄
-//                                                        █   █  █  █   █  █  █   █  █  █   █
-//                                                         ▀▀▀   █   ▀▀▀   █   ▀▀▀   ▀   ▀▀▀
-//                                                               █      ▄▄▄█▄▄▄    █   █  
-//                                                               ▀      █  █  █     █▄█
-//                                                             ▀▀▀▀▀    █  █  █      ▀
-//                                                                      ▀  ▀  ▀
-//
-// ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 
-#define Base        0
-#define Nav         1
-#define Sym         2
-#define Fun         3
-#define Game        4
-#define Gameplus    5
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1500  // default: 600
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 20    // default: 10
+#define BASE 0
+#define NAV  1
+#define SYM  2
+#define ADJ  3
+
+/* --- GLOBAL SETTINGS --- */
 
 &mt {
-    quick-tap-ms = <100>;
+    quick-tap-ms = <175>;
     global-quick-tap;
-    flavor = "tap-preferred";
-    tapping-term-ms = <170>;
-};
-
-&lt {
-    tapping-term-ms = <240>;
-    flavor = "balanced";
-    quick-tap-ms = <150>;
+    flavor = "hold-preferred";
+    tapping-term-ms = <200>;
 };
 
 / {
-    behaviors {
-        hm: homerow_mods {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <125>;
-            global-quick-tap;
-            bindings = <&kp>, <&kp>;
+    combos {
+        compatible = "zmk,combos";
+
+        tab {
+            bindings = <&kp TAB>;
+            key-positions = <0 1>;
+        };
+
+        tilde {
+            bindings = <&kp GRAVE>;
+            key-positions = <4 5>;
+        };
+
+        minus {
+            bindings = <&kp MINUS>;
+            key-positions = <8 9>;
+        };
+
+        rslash {
+            bindings = <&kp NON_US_BACKSLASH>;
+            key-positions = <14 15>;
+        };
+
+        plus {
+            bindings = <&kp EQUAL>;
+            key-positions = <29 30>;
+        };
+
+        rs {
+            bindings = <&kp BACKSLASH>;
+            key-positions = <25 26>;
+        };
+
+        lay0 {
+            bindings = <&to 0>;
+            key-positions = <20 31>;
         };
     };
 
-    combos { compatible = "zmk,combos"; };
+    behaviors {
+        /* FIXED: Now correctly binds keys for Home Row Mods */
+
+        shiftdel: shiftdel {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SHIFTDEL";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            hold-while-undecided;
+            hold-trigger-key-positions = <0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 36 37 35 34>;
+        };
+
+        fastermomentap: fastermomentap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "FASTERMOMENTAP";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            hold-while-undecided;
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 36 37 35 34>;
+        };
+
+        tabbr: tabbr {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TABBR";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            hold-trigger-key-positions = <0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 36 37 34 35>;
+            hold-while-undecided;
+            hold-trigger-on-release;
+            flavor = "tap-unless-interrupted";
+        };
+    };
+
+    /* NEW: Hold both thumb keys (SPACE + ENTER) to reach ADJ layer */
+
+    cond_layers { compatible = "zmk,conditional-layers"; };
 
     keymap {
         compatible = "zmk,keymap";
 
-        Base {
-            display-name = "Base";
+        base_layer {
+            label = "BASE";
             bindings = <
-              &kp Q       &kp W       &kp E          &kp R         &kp T        &kp Y    &kp U        &kp I        &kp O       &kp P
-              &hm LGUI A  &hm LALT S  &hm LCTRL D    &hm LSHIFT F  &kp G        &kp H    &hm RSHFT J  &hm RCTRL K  &hm RALT L  &hm RGUI SEMICOLON
-&lt 3 ESCAPE  &kp Z       &kp X       &kp C          &kp V         &kp B        &kp N    &kp M        &kp COMMA    &kp DOT     &kp SLASH           &kp APOSTROPHE
-                                      &mt LCTRL DEL  &lt 1 TAB     &kp SPACE    &kp RET  &lt 2 BSPC   &kp MINUS
+                               &kp Q  &kp W  &kp E                 &kp R         &kp T                      &kp Y                    &kp U                           &kp I         &kp O    &kp P
+                               &kp A  &kp S  &kp D                 &kp F         &kp G                      &kp H                    &kp J                           &kp K         &kp L    &kp SEMICOLON
+&shiftdel LEFT_CONTROL ESCAPE  &kp Z  &kp X  &kp C                 &kp V         &kp B                      &kp N                    &kp M                           &kp COMMA     &kp DOT  &kp FSLH       &kp SQT
+                                             &sk LS(LEFT_CONTROL)  &kp LEFT_GUI  &fastermomentap 1 SPACE    &fastermomentap 2 ENTER  &shiftdel LEFT_SHIFT BACKSPACE  &sk LEFT_ALT
             >;
         };
 
-        Nav {
-            display-name = "Nav";
+        nav_layer {
+            label = "NAV";
             bindings = <
-              &kp TILDE       &trans     &kp UP_ARROW  &trans     &kp LBRC    &kp RBRC  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
-              &kp LEFT_SHIFT  &kp LEFT   &kp DOWN      &kp RIGHT  &kp LBKT    &kp RBKT  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS
-&kp LEFT_ALT  &kp LEFT_WIN    &kp MINUS  &trans        &kp PLUS   &kp LPAR    &kp RPAR  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_MULTIPLY  &kp PLUS
-                                         &trans        &trans     &trans      &trans    &trans        &kp DOT
+         &sk LS(LEFT_GUI)  &kp N1  &kp N2  &kp N3  &kp PG_UP    &kp LS(LG(R))      &kp LC(TAB)        &kp LC(LS(TAB))   &kp C_BRI_DEC  &kp C_BRI_INC
+         &kp LS(LGUI)      &kp N4  &kp N5  &kp N6  &kp N0       &kp LEFT           &kp DOWN           &kp UP            &kp RIGHT      &kp C_VOL_UP
+&kp END  &kp LEFT_GUI      &kp N7  &kp N8  &kp N9  &kp PG_DN    &kp LC(LA(LG(R)))  &kp C_PREV         &kp C_PLAY_PAUSE  &kp C_NEXT     &kp C_VOL_DN   &kp HOME
+                                   &trans  &trans  &trans       &kp LS(ENTER)      &kp LC(BACKSPACE)  &kp BSPC
             >;
         };
 
-        Sym {
-            display-name = "Sym";
+        sim_layer {
+            label = "SYM";
             bindings = <
-                &kp EXCL  &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT    &kp CARET  &kp AMPERSAND  &kp KP_ASTERISK  &kp SQT  &kp DQT
-                &trans    &trans  &trans    &trans      &trans         &trans     &trans         &trans           &trans   &trans
-&studio_unlock  &trans    &trans  &trans    &trans      &trans         &kp UNDER  &kp EQUAL      &trans           &trans   &kp SLASH  &kp HOME
-                                  &trans    &trans      &trans         &trans     &trans         &trans
+            &kp LS(N1)    &kp LS(N2)  &kp LS(N3)    &kp LS(N4)      &kp LS(N4)    &kp LS(N5)  &kp LS(N5)             &kp LS(N6)           &kp LS(N7)  &kp LS(N8)
+            &kp CAPSLOCK  &kp LBKT    &kp LS(LBKT)  &kp LS(N9)      &kp AT        &kp F12     &kp LS(N0)             &kp LS(RBKT)         &kp RBKT    &none
+&kp KP_NUM  &kp DEL       &kp KP_N1   &kp KP_N2     &kp KP_N4       &kp KP_DOT    &trans      &kp LS(LC(PAGE_DOWN))  &kp LC(LS(PAGE_UP))  &trans      &none       &none
+                                      &to 3         &kp LS(DELETE)  &mo 3         &kp SPACE   &kp C_PP               &tog 4
             >;
         };
 
-        Fun {
-            display-name = "Fun";
+        adjust_layer {
+            label = "ADJ";
             bindings = <
-        &bootloader  &trans  &trans  &trans  &to 4     &trans  &trans  &trans  &kp END  &kp F1
-        &trans       &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans   &kp F10
-&trans  &trans       &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans   &kp F20  &kp F7
-                             &trans  &trans  &trans    &trans  &trans  &trans
+        &kp TAB    &kp PG_UP  &kp UP          &kp PG_DN  &trans       &none           &mkp MB1        &mkp MB2      &mkp MB3         &none
+        &kp LCTRL  &kp LEFT   &kp DOWN_ARROW  &kp RIGHT  &trans       &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &none
+&trans  &trans     &trans     &trans          &trans     &trans       &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none  &studio_unlock
+                              &trans          &kp SPACE  &kp ENTER    &trans          &trans          &to 0
             >;
         };
 
-        Gaming {
-            display-name = "Game";
+        game {
             bindings = <
-            &kp Z           &kp X  &kp C      &kp V         &sl 5     &trans  &trans  &trans  &trans  &trans
-            &kp TAB         &kp Q  &kp W      &kp E         &kp R     &trans  &trans  &trans  &trans  &trans
-&kp ESCAPE  &kp LEFT_SHIFT  &kp A  &kp S      &kp D         &kp F     &trans  &trans  &trans  &trans  &trans  &trans
-                                   &kp LCTRL  &kp LEFT_ALT  &trans    &trans  &trans  &trans
+         &kp TAB           &kp Q  &kp W         &kp E  &kp R        &kp Y     &kp U     &kp I      &kp O    &kp P
+         &kp LEFT_SHIFT    &kp A  &kp S         &kp D  &kp F        &kp H     &kp J     &kp K      &kp L    &kp SEMI
+&kp ESC  &kp LEFT_CONTROL  &kp Z  &kp X         &kp C  &kp V        &kp N     &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp APOS
+                                  &kp LEFT_GUI  &sl 1  &kp SPACE    &kp LEFT  &kp DOWN  &kp RIGHT
             >;
         };
 
-        Gaming+ {
-            display-name = "Game+";
+        layer_5 {
             bindings = <
-        &kp F10  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp T     &kp RA(RC(Y))  &kp RA(RC(U))  &trans  &trans  &kp LC(RA(DEL))
-        &kp L    &kp O         &kp Y         &kp K         &kp G     &kp F5         &kp F7         &trans  &trans  &kp F12
-&trans  &to 0    &trans        &trans        &trans        &trans    &trans         &trans         &trans  &trans  &kp F22          &kp LA(F4)
-                               &kp J         &kp I         &kp M     &trans         &trans         &trans
+        &trans  &trans  &trans  &trans  &trans       &trans     &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans       &trans     &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans       &trans     &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &kp SPACE    &kp SPACE  &trans  &trans
             >;
         };
     };
